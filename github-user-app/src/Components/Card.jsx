@@ -28,15 +28,28 @@ const StyledDiv = styled.div`
   }
 `;
 
-const Card = props => {
-  const { login, id, url, avatar_url } = props.user;
-  return (
-    <StyledDiv>
-      <h1>{login}</h1>
-      <h3>id: {id}</h3>
-      <h3>url: {url}</h3>
-      <img classname="avatar" src={avatar_url} alt="avatar pic" />
-    </StyledDiv>
-  );
-};
-export default Card;
+// const Card = props => {
+//   const { login, id, url, avatar_url } = props.user;
+//   return (
+//     <StyledDiv>
+//       <h1>{login}</h1>
+//       <h3>id: {id}</h3>
+//       <h3>url: {url}</h3>
+//       <img classname="avatar" src={avatar_url} alt="avatar pic" />
+//     </StyledDiv>
+//   );
+// };
+// export default Card;
+
+export default class Card extends React.Component {
+  render() {
+    return (
+      <StyledDiv>
+        <h1>{this.props.login}</h1>
+        <h3>id: {this.props.id}</h3>
+        <h3>url: {this.props.url}</h3>
+        <img classname="avatar" src={this.props.avatar_url} alt="avatar pic" />
+      </StyledDiv>
+    );
+  }
+}
