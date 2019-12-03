@@ -7,7 +7,7 @@ import GithubUserData from "./Components/GithubUserData";
 function App() {
   return (
     <div>
-      <div className="App">GitHub User Card App</div>;
+      <div className="App">GitHub User Card App</div>
       <GithubUserData />
     </div>
   );

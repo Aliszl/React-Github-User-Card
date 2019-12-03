@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Card from "./Card";
 
 export default function GithubUserData() {
   const [users, fetchUsers] = useState([]);
@@ -22,8 +23,9 @@ export default function GithubUserData() {
   return (
     <div>
       {users.map(user => {
-        return <div>{user.name}</div>;
+        return <Card user={user} />;
       })}
+      {/* <div>{user.login}</div> */}
     </div>
   );
 }
